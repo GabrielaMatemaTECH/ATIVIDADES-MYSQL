@@ -1,0 +1,52 @@
+
+//1)
+
+create database DB_HR;
+
+select * from colaborador;
+
+delete from colaborador where id = 1;
+
+//2) 
+
+create table Colaborador (
+id bigint auto_increment,
+nomeColaborador char(255) not null ,
+empresa varchar(255) not null,
+cnpj bigint not null,
+valor double not null,
+atividade char(255) not null,
+primary key(id)
+);
+
+//3) 
+
+insert into Colaborador(nomeColaborador, empresa,cnpj, valor, atividade)
+values("Pedro","Varchar Inc.",1068,1500,"Ativo");
+
+insert into Colaborador(nomeColaborador, empresa,cnpj, valor, atividade)
+values("Lisandra","Portugol Corp.",1868,3500,"Em negocioação");
+
+insert into Colaborador(nomeColaborador, empresa,cnpj, valor, atividade)
+values("Julio","Oracle Sa.",1816,4500,"Ativo");
+
+insert into Colaborador(nomeColaborador, empresa,cnpj, valor, atividade)
+values("Lucas","MySQL",8761,1200,"Ativo");
+
+insert into Colaborador(nomeColaborador, empresa,cnpj, valor, atividade)
+values("Max","Oracle Sa.",1816,4050,"Ativo");
+
+insert into Colaborador(nomeColaborador, empresa,cnpj, valor, atividade)
+values("Léo","Google",7264,6200,"Desativado");
+
+//4)
+
+select * from Colaborador where valor > 2000;
+
+//5) 
+
+select * from Colaborador where valor < 2000;
+
+//6) 
+
+update colaborador set nomeColaborador = "GABRIELA" where id =1;
